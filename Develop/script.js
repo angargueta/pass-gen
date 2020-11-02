@@ -26,7 +26,7 @@ function generatePassword() {
     } 
 
 
-  // Type of characters user would like the password to contain
+// Type of characters user would like the password to contain
   var verifyLowercase = confirm("Click OK to confirm if you would like to include lowercase characters");
   var verifyUppercase = confirm("Click OK to confirm if you would like to include uppercase characters");
   var verifyNumeric = confirm("Click OK to confirm if you would like to include numeric characters"); 
@@ -61,7 +61,7 @@ function generatePassword() {
 //generates password
  var createPassword = ""  
    for (i = 0; i < verifyLength; i++) {
-     var createPssword = createPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+     var createPassword = createPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
      console.log(createPassword)
    }
    return createPassword;
