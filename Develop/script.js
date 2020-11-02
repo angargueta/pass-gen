@@ -32,7 +32,7 @@ function generatePassword() {
   var verifyNumeric = confirm("Click OK to confirm if you would like to include numeric characters"); 
   var verifySpecialcharacter = confirm("Click OK to confirm if you would like to include special characters");   
   
-// Loop if password outside parametes
+// Loop if password outside parameters
     while(verifyLowercase === false && verifyUppercase === false && verifyNumeric === false && verifySpecialcharacter === false) {
       alert("You must choose at least one parameter");
       var verifyLowercase = confirm("Click OK to confirm if you would like to include lowercase characters");
@@ -41,6 +41,31 @@ function generatePassword() {
       var verifySpecialcharacter = confirm("Click OK to confirm if you would like to include special characters");
               
   } 
+
+ // Password parameters
+ var passwordCharacters = []
+    if (verifyLowercase) {
+      passwordCharacters = passwordCharacters.concat(lowercase)
+    }
+    if (verifyUppercase) {
+    passwordCharacters = passwordCharacters.concat(uppercase)
+    }  
+    if (verifyNumeric) {
+      passwordCharacters = passwordCharacters.concat(numeric)
+    }
+    if (verifySpecialcharacter) {
+      passwordCharacters = passwordCharacters.concat(specialCharacters)
+    } 
+  console.log(passwordCharacters)
+
+//generates password
+ var createPassword = ""  
+   for (i = 0; i < verifyLength; i++) {
+     var createPssword = createPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+     console.log(createPassword)
+   }
+   return createPassword;
+}
 
 
 
