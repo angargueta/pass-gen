@@ -10,7 +10,7 @@ The requirements for this challenge were:
     </ul>
 
 Mock up of the page:
-<img src="./develop/images/Screenshot.png">
+<img src="https://github.com/angargueta/pass-gen/blob/master/Develop/images/Screenshot.png?raw=true">
 
 URL link: https://angargueta.github.io/pass-gen/
 
