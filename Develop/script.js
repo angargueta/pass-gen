@@ -1,6 +1,17 @@
 // Assignment code here
 
 
+//Globals
+
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789";
+var specialCharacters ="!@#$%^&*()_+[]{}<>?";
+var choosenCharacters = "";
+var password = "";
+ 
+ 
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
