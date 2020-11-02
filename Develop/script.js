@@ -19,6 +19,31 @@ function generatePassword() {
   var verifyLength = (prompt("How long would you like your password to be?"));
 
 
+  // Loop if password not between 8 to 128 characters
+  while(verifyLength <= 7 || verifyLength >= 129) {
+    alert("Password length must be between 8 to 128 characters");
+    var verifyLength = (prompt("How many characters would you like your password to contain?"));
+    } 
+
+
+  // Type of characters user would like the password to contain
+  var verifyLowercase = confirm("Click OK to confirm if you would like to include lowercase characters");
+  var verifyUppercase = confirm("Click OK to confirm if you would like to include uppercase characters");
+  var verifyNumeric = confirm("Click OK to confirm if you would like to include numeric characters"); 
+  var verifySpecialcharacter = confirm("Click OK to confirm if you would like to include special characters");   
+  
+// Loop if password outside parametes
+    while(verifyLowercase === false && verifyUppercase === false && verifyNumeric === false && verifySpecialcharacter === false) {
+      alert("You must choose at least one parameter");
+      var verifyLowercase = confirm("Click OK to confirm if you would like to include lowercase characters");
+      var verifyUppercase = confirm("Click OK to confirm if you would like to include uppercase characters"); 
+      var verifyNumeric = confirm("Click OK to confirm if you would like to include numeric characters");
+      var verifySpecialcharacter = confirm("Click OK to confirm if you would like to include special characters");
+              
+  } 
+
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
